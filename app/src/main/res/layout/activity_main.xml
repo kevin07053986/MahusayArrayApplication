@@ -7,28 +7,62 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/inputName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter student name"
-        android:layout_margin="16dp"
-        android:layout_alignParentTop="true"/>
+        android:id="@+id/editName"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:textColorHint="#B5AFAF" />
+
+    <EditText
+        android:id="@+id/editEmailAddress"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Enter your email"
+        android:textColorHint="#B5AFAF"
+        android:layout_below="@id/editName"/>
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="16dp"
+        android:hint="Enter your password"
+        android:textColorHint="#B5AFAF"
+        android:layout_toRightOf="@id/editEmailAddress"
+        android:layout_below="@id/editName"/>
 
     <Button
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/inputName"
-        android:layout_alignParentEnd="true"
+        android:layout_below="@id/editEmailAddress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
+        android:gravity="center"
         android:onClick="addStudent"
-        android:text="Add"/>
+        android:text="Add" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/inputName"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/addButton"
         android:layout_marginBottom="64dp"/>
 
     <TextView
@@ -36,7 +70,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/listView"
-        android:layout_margin="16dp"
+        android:text=""
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/displayTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayText"
+        android:text=""
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/displayTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayTextEmail"
         android:text=""
         android:textSize="18sp"/>
 
